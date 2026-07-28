@@ -14,14 +14,22 @@
       <i class="fas fa-film"></i> CineExplorer
     </div>
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Pesquisar filme...">
+      <input type="text" id="searchInput" placeholder="Pesquisar por título...">
       <button id="searchBtn"><i class="fas fa-search"></i></button>
     </div>
     <nav>
-      <button id="showTrendingBtn" class="active">Em Alta</button>
-      <button id="showFavoritesBtn">Minha Biblioteca (<span id="favCount">0</span>)</button>
+      <button id="showTrendingBtn" class="active"><i class="fas fa-fire"></i> Em Alta</button>
+      <button id="showFavoritesBtn"><i class="fas fa-heart"></i> Favoritos (<span id="favCount">0</span>)</button>
     </nav>
   </header>
+
+  <section class="genre-container">
+    <button class="genre-btn active" data-genre="todos">Todos</button>
+    <button class="genre-btn" data-genre="Ação">Ação</button>
+    <button class="genre-btn" data-genre="Ficção Científica">Ficção Científica</button>
+    <button class="genre-btn" data-genre="Drama">Drama</button>
+    <button class="genre-btn" data-genre="Animação">Animação</button>
+  </section>
 
   <main>
     <h2 id="sectionTitle">Filmes em Alta</h2>
@@ -31,7 +39,7 @@
 
   <div id="movieModal" class="modal hidden">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
+      <span class="close-btn" id="closeModal">&times;</span>
       <div id="modalBody">
         </div>
     </div>
