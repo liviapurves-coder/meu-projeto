@@ -22,8 +22,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #000;
+  padding: 1rem 2rem;
+  background-color: #000000;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -44,6 +44,8 @@ header {
   border: none;
   border-radius: 4px 0 0 4px;
   outline: none;
+  background-color: #333;
+  color: #fff;
 }
 
 .search-box button {
@@ -53,6 +55,25 @@ header {
   color: white;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .genre-container {
@@ -69,7 +90,8 @@ header {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  white-space: nowrap;
+  transition: 0.2s;
 }
 
 .genre-btn.active, .genre-btn:hover {
@@ -83,22 +105,81 @@ main {
 
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-/* Estrutura base do Modal */
+.movie-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.movie-card.hidden {
+  display: none !important;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 0.8rem;
+}
+
+.movie-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.fav-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 6px;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.fav-icon.active {
+  color: var(--primary-color);
+}
+
+/* Modal */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal.hidden {
