@@ -14,7 +14,7 @@ const modal = document.getElementById('movieModal');
 const modalBody = document.getElementById('modalBody');
 const closeModal = document.getElementById('closeModal');
 
-// Filtra os cards HTML existentes no DOM
+// Filtra os elementos exibidos no DOM
 function applyFilters() {
   const query = searchInput.value.toLowerCase().trim();
 
@@ -35,7 +35,7 @@ function applyFilters() {
   });
 }
 
-// Favoritar filme
+// Eventos dos cards de filme
 movieCards.forEach(card => {
   const favIcon = card.querySelector('.fav-icon');
   const id = card.dataset.id;
@@ -82,5 +82,34 @@ genreBtns.forEach(btn => {
   });
 });
 
-// Busca
-searchBtn.addEventListener('click
+// Pesquisa (em tempo real e via botão)
+searchInput.addEventListener('input', applyFilters);
+searchBtn.addEventListener('click', applyFilters);
+
+// Alternar Abas (Em Alta / Favoritos)
+showTrendingBtn.addEventListener('click', () => {
+  showingFavoritesOnly = false;
+  showTrendingBtn.classList.add('active');
+  showFavoritesBtn.classList.remove('active');
+  sectionTitle.textContent = 'Filmes em Alta';
+  applyFilters();
+});
+
+showFavoritesBtn.addEventListener('click', () => {
+  showingFavoritesOnly = true;
+  showFavoritesBtn.classList.add('active');
+  showTrendingBtn.classList.remove('active');
+  sectionTitle.textContent = 'Meus Favoritos';
+  applyFilters();
+});
+
+// Fechar Modal
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
