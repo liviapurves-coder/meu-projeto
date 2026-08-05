@@ -27,13 +27,15 @@
     <button class="genre-btn active" data-genre="todos">Todos</button>
     <button class="genre-btn" data-genre="Ação">Ação</button>
     <button class="genre-btn" data-genre="Ficção Científica">Ficção Científica</button>
+    <button class="genre-btn" data-genre="Drama">Drama</button>
+    <button class="genre-btn" data-genre="Animação">Animação</button>
   </section>
 
   <main>
     <h2 id="sectionTitle">Filmes em Alta</h2>
     <div id="moviesGrid" class="movies-grid">
 
-      <div class="movie-card" data-id="1" data-title="Mad Max: Estrada da Fúria" data-genre="Ação" data-year="2015" data-rating="8.1" data-overview="Em um mundo pós-apocalíptico, Max se une a Furiosa para escapar de um tirano.">
+      <div class="movie-card" data-id="1" data-title="Mad Max: Estrada da Fúria" data-genre="Ação" data-year="2015" data-rating="8.1" data-overview="Em um mundo pós-apocalíptico, Max se une a Furiosa para escapar de um tirano e seus capangas em uma corrida mortal pelo deserto.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/8t899cR2q8M4ACh1Jw1yO3pM33x.jpg" alt="Mad Max: Estrada da Fúria">
         <div class="movie-info">
@@ -42,7 +44,7 @@
         </div>
       </div>
 
-      <div class="movie-card" data-id="2" data-title="John Wick" data-genre="Ação" data-year="2014" data-rating="7.4" data-overview="Um ex-assassino sai da aposentadoria para buscar vingança.">
+      <div class="movie-card" data-id="2" data-title="John Wick" data-genre="Ação" data-year="2014" data-rating="7.4" data-overview="Um ex-assassino de aluguel sai da aposentadoria para rastrear os gângsteres que tiraram tudo dele.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/fZAaw6J021R4m08Trm0Q2C1D27k.jpg" alt="John Wick">
         <div class="movie-info">
@@ -51,7 +53,7 @@
         </div>
       </div>
 
-      <div class="movie-card" data-id="3" data-title="Gladiador" data-genre="Ação" data-year="2000" data-rating="8.5" data-overview="Um ex-general romano busca vingança contra o imperador corrupto.">
+      <div class="movie-card" data-id="3" data-title="Gladiador" data-genre="Ação" data-year="2000" data-rating="8.5" data-overview="Um ex-general romano busca vingança contra o imperador corrupto que assassinou sua família e o enviou para a escravidão.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/ty8T3331L323j8p3dK3m1383oJ.jpg" alt="Gladiador">
         <div class="movie-info">
@@ -60,16 +62,16 @@
         </div>
       </div>
 
-      <div class="movie-card" data-id="4" data-title="Batman: O Cavaleiro das Trevas" data-genre="Ação" data-year="2008" data-rating="9.0" data-overview="Batman enfrenta o Coringa em uma batalha pelo destino de Gotham.">
+      <div class="movie-card" data-id="4" data-title="Batman: O Cavaleiro das Trevas" data-genre="Ação" data-year="2008" data-rating="9.0" data-overview="Batman enfrenta o Coringa, um criminoso sádico que tenta mergulhar Gotham City no caos e anarquia.">
         <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Batman: O Cavaleiro das Trevas">
+        <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Batman">
         <div class="movie-info">
           <div class="movie-title">Batman: O Cavaleiro das Trevas</div>
           <div class="movie-meta"><span>2008</span><span><i class="fas fa-star" style="color:#f39c12"></i> 9.0</span></div>
         </div>
       </div>
 
-      <div class="movie-card" data-id="5" data-title="Vingadores: Ultimato" data-genre="Ação" data-year="2019" data-rating="8.4" data-overview="Os heróis restantes tentam desfazer as ações de Thanos.">
+      <div class="movie-card" data-id="5" data-title="Vingadores: Ultimato" data-genre="Ação" data-year="2019" data-rating="8.4" data-overview="Após os eventos devastadores de Guerra Infinita, os heróis restantes se reúnem para desfazer as ações de Thanos.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" alt="Vingadores: Ultimato">
         <div class="movie-info">
@@ -78,52 +80,34 @@
         </div>
       </div>
 
-      <div class="movie-card" data-id="6" data-title="Top Gun: Maverick" data-genre="Ação" data-year="2022" data-rating="8.3" data-overview="Maverick treina uma nova turma de pilotos para uma missão especial.">
+      <div class="movie-card" data-id="6" data-title="Top Gun: Maverick" data-genre="Ação" data-year="2022" data-rating="8.3" data-overview="Maverick retorna à marinha para treinar uma nova turma de graduados TOPGUN para uma missão especializada e perigosa.">
         <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/62HC1133333oM3333333.jpg" alt="Top Gun: Maverick" onerror="this.src='https://image.tmdb.org/t/p/w500/4S8ThEofGqXv86iIn4p9tM7tM15.jpg'">
+        <img src="https://image.tmdb.org/t/p/w500/4S8ThEofGqXv86iIn4p9tM7tM15.jpg" alt="Top Gun: Maverick">
         <div class="movie-info">
           <div class="movie-title">Top Gun: Maverick</div>
           <div class="movie-meta"><span>2022</span><span><i class="fas fa-star" style="color:#f39c12"></i> 8.3</span></div>
         </div>
       </div>
 
-      <div class="movie-card" data-id="7" data-title="Missão Impossível: Efeito Fallout" data-genre="Ação" data-year="2018" data-rating="7.7" data-overview="Ethan Hunt e sua equipe correm contra o tempo após uma missão dar errado.">
+      <div class="movie-card" data-id="7" data-title="Missão Impossível: Efeito Fallout" data-genre="Ação" data-year="2018" data-rating="7.7" data-overview="Ethan Hunt e sua equipe correm contra o tempo para impedir um ataque nuclear catastrófico após uma missão dar errado.">
         <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/A23C2LdC3oI933L3.jpg" alt="MI Fallout" onerror="this.src='https://image.tmdb.org/t/p/w500/Ak324312389139.jpg'">
+        <img src="https://image.tmdb.org/t/p/w500/Ak324312389139.jpg" alt="Missão Impossível" onerror="this.src='https://image.tmdb.org/t/p/w500/8t899cR2q8M4ACh1Jw1yO3pM33x.jpg'">
         <div class="movie-info">
           <div class="movie-title">Missão Impossível: Fallout</div>
           <div class="movie-meta"><span>2018</span><span><i class="fas fa-star" style="color:#f39c12"></i> 7.7</span></div>
         </div>
       </div>
 
-      <div class="movie-card" data-id="8" data-title="O Resgate do Soldado Ryan" data-genre="Ação" data-year="1998" data-rating="8.6" data-overview="Capitão Miller lidera equipe para resgatar um paraquedista na 2ª Guerra.">
+      <div class="movie-card" data-id="8" data-title="O Resgate do Soldado Ryan" data-genre="Ação" data-year="1998" data-rating="8.6" data-overview="Na Segunda Guerra Mundial, o Capitão Miller lidera seus homens atrás das linhas inimigas para encontrar o Soldado Ryan.">
         <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/3oLwL0v03A4dM7I1.jpg" alt="Soldado Ryan" onerror="this.src='https://image.tmdb.org/t/p/w500/8C934781293812398.jpg'">
+        <img src="https://image.tmdb.org/t/p/w500/nR337x19280.jpg" alt="Soldado Ryan" onerror="this.src='https://image.tmdb.org/t/p/w500/ty8T3331L323j8p3dK3m1383oJ.jpg'">
         <div class="movie-info">
           <div class="movie-title">O Resgate do Soldado Ryan</div>
           <div class="movie-meta"><span>1998</span><span><i class="fas fa-star" style="color:#f39c12"></i> 8.6</span></div>
         </div>
       </div>
 
-      <div class="movie-card" data-id="9" data-title="Pantera Negra" data-genre="Ação" data-year="2018" data-rating="7.3" data-overview="T'Challa retorna a Wakanda para assumir o trono como rei.">
-        <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/uxzz9333311111.jpg" alt="Pantera Negra" onerror="this.src='https://image.tmdb.org/t/p/w500/94832948239.jpg'">
-        <div class="movie-info">
-          <div class="movie-title">Pantera Negra</div>
-          <div class="movie-meta"><span>2018</span><span><i class="fas fa-star" style="color:#f39c12"></i> 7.3</span></div>
-        </div>
-      </div>
-
-      <div class="movie-card" data-id="10" data-title="O Exterminador do Futuro 2" data-genre="Ação" data-year="1991" data-rating="8.6" data-overview="Cyborg é enviado no tempo para proteger o jovem John Connor.">
-        <i class="fas fa-heart fav-icon"></i>
-        <img src="https://image.tmdb.org/t/p/w500/5m11111.jpg" alt="Terminator 2" onerror="this.src='https://image.tmdb.org/t/p/w500/we82398492.jpg'">
-        <div class="movie-info">
-          <div class="movie-title">O Exterminador do Futuro 2</div>
-          <div class="movie-meta"><span>1991</span><span><i class="fas fa-star" style="color:#f39c12"></i> 8.6</span></div>
-        </div>
-      </div>
-
-      <div class="movie-card" data-id="11" data-title="Interestelar" data-genre="Ficção Científica" data-year="2014" data-rating="8.7" data-overview="Um grupo de exploradores viaja através de um buraco de minhoca no espaço.">
+      <div class="movie-card" data-id="11" data-title="Interestelar" data-genre="Ficção Científica" data-year="2014" data-rating="8.7" data-overview="Uma equipe de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de garantir a sobrevivência da humanidade.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interestelar">
         <div class="movie-info">
@@ -132,12 +116,30 @@
         </div>
       </div>
 
-      <div class="movie-card" data-id="12" data-title="A Origem" data-genre="Ficção Científica" data-year="2010" data-rating="8.8" data-overview="Ladrão que rouba segredos corporativos através de sonhos recebe tarefa inversa.">
+      <div class="movie-card" data-id="12" data-title="A Origem" data-genre="Ficção Científica" data-year="2010" data-rating="8.8" data-overview="Um ladrão que rouba segredos corporativos através do uso da tecnologia de compartilhamento de sonhos recebe a tarefa inversa de plantar uma ideia.">
         <i class="fas fa-heart fav-icon"></i>
         <img src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="A Origem">
         <div class="movie-info">
           <div class="movie-title">A Origem</div>
           <div class="movie-meta"><span>2010</span><span><i class="fas fa-star" style="color:#f39c12"></i> 8.8</span></div>
+        </div>
+      </div>
+
+      <div class="movie-card" data-id="13" data-title="O Chefão" data-genre="Drama" data-year="1972" data-rating="9.2" data-overview="O patriarca idoso de uma dinastia do crime organizado transfere o controle de seu império clandestino para seu filho relutante.">
+        <i class="fas fa-heart fav-icon"></i>
+        <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="O Chefão">
+        <div class="movie-info">
+          <div class="movie-title">O Chefão</div>
+          <div class="movie-meta"><span>1972</span><span><i class="fas fa-star" style="color:#f39c12"></i> 9.2</span></div>
+        </div>
+      </div>
+
+      <div class="movie-card" data-id="14" data-title="Homem-Aranha: No Aranhaverso" data-genre="Animação" data-year="2018" data-rating="8.4" data-overview="O jovem Miles Morales se torna o Homem-Aranha de seu universo e precisa se unir com outras versões de dimensões paralelas.">
+        <i class="fas fa-heart fav-icon"></i>
+        <img src="https://image.tmdb.org/t/p/w500/2Y1m1x6m.jpg" alt="Homem Aranha" onerror="this.src='https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg'">
+        <div class="movie-info">
+          <div class="movie-title">Homem-Aranha: No Aranhaverso</div>
+          <div class="movie-meta"><span>2018</span><span><i class="fas fa-star" style="color:#f39c12"></i> 8.4</span></div>
         </div>
       </div>
 
@@ -147,7 +149,7 @@
   <div id="movieModal" class="modal hidden">
     <div class="modal-content">
       <span id="closeModal" class="close-btn">&times;</span>
-      <div id="modalBody"></div>
+      <div id="modalBody" class="modal-body-layout"></div>
     </div>
   </div>
 
