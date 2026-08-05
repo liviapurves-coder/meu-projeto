@@ -2,6 +2,7 @@ let favorites = [];
 let currentFilter = 'todos';
 let showingFavoritesOnly = false;
 
+// Seletores do DOM
 const movieCards = document.querySelectorAll('.movie-card');
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
@@ -14,7 +15,7 @@ const modal = document.getElementById('movieModal');
 const modalBody = document.getElementById('modalBody');
 const closeModal = document.getElementById('closeModal');
 
-// Filtra os elementos exibidos no DOM
+// Função de Filtro Geral
 function applyFilters() {
   const query = searchInput.value.toLowerCase().trim();
 
@@ -35,13 +36,13 @@ function applyFilters() {
   });
 }
 
-// Eventos dos cards de filme
+// Eventos de Favoritos e Clique no Card
 movieCards.forEach(card => {
   const favIcon = card.querySelector('.fav-icon');
   const id = card.dataset.id;
 
   favIcon.addEventListener('click', (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // Evita abrir o modal ao favoritar
     if (favorites.includes(id)) {
       favorites = favorites.filter(favId => favId !== id);
       favIcon.classList.remove('active');
@@ -60,19 +61,22 @@ movieCards.forEach(card => {
     const genre = card.dataset.genre;
     const rating = card.dataset.rating;
     const overview = card.dataset.overview;
+    const imgSrc = card.querySelector('img').src;
 
     modalBody.innerHTML = `
-      <h2>${title} (${year})</h2>
-      <p style="margin-top:0.5rem"><strong>Gênero:</strong> ${genre}</p>
-      <p style="margin-top:0.3rem"><strong>Avaliação:</strong> <i class="fas fa-star" style="color:#f39c12"></i> ${rating}</p>
-      <br>
-      <p>${overview}</p>
+      <img src="${imgSrc}" alt="${title}">
+      <div class="modal-details">
+        <h2>${title} (${year})</h2>
+        <p style="margin-bottom:0.4rem"><strong>Gênero:</strong> ${genre}</p>
+        <p style="margin-bottom:0.8rem"><strong>Avaliação:</strong> <i class="fas fa-star" style="color:#f39c12"></i> ${rating}</p>
+        <p>${overview}</p>
+      </div>
     `;
     modal.classList.remove('hidden');
   });
 });
 
-// Botões de Gênero
+// Filtros por Gênero
 genreBtns.forEach(btn => {
   btn.addEventListener('click', (e) => {
     genreBtns.forEach(b => b.classList.remove('active'));
@@ -82,11 +86,11 @@ genreBtns.forEach(btn => {
   });
 });
 
-// Pesquisa (em tempo real e via botão)
+// Busca corrigida (Pesquisa em tempo real + Clique no botão)
 searchInput.addEventListener('input', applyFilters);
 searchBtn.addEventListener('click', applyFilters);
 
-// Alternar Abas (Em Alta / Favoritos)
+// Alternar abas: Em Alta vs Favoritos
 showTrendingBtn.addEventListener('click', () => {
   showingFavoritesOnly = false;
   showTrendingBtn.classList.add('active');
